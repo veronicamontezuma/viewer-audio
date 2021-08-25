@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link rel="stylesheet" href="./style.css">
+
+   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+</head>
+<body>
+
+   <div id="overlay" class="show">
+      <div id="request-press-play">
+        <button id="play-button">Start Audio Playback<br/>(needs user interaction)</button>  
+      </div>
+    </div>
+  
+    <div id="card">
+      
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="assets/models/Astronaut.glb?sound=assets/audio/sample.mp3"
+                  ios-src="assets/models/Astronaut.usdz"
+                  alt="A 3D model of an astronaut"
+                  shadow-intensity="1"
+                  camera-controls
+                  interaction-prompt="auto"
+                  auto-rotate
+                  autoplay 
+                  ar
+                  magic-leap
+                  id="model-viewer">
+    </model-viewer>
+    <section class="attribution">
+      <div>
+        <span>
+        <h3>Player</h3>
+        <span><audio autoplay controls loop id="sound">
+              <source src="assets/audio/sample.mp3" type="audio/mp3">
+              <!-- <source src="https://cdn.glitch.com/7d7e8236-5fa5-4809-ab74-eb6bf2bef1c6%2FPenguin_Emperor_Unisex_Adult.ogg?v=1580245082333" type="audio/ogg"> -->
+          </audio></span>
+        </span>
+      </div>
+      <!-- <div id="timesteps">
+        <button onclick="jumpTo(0)">0s</button>
+        <button onclick="jumpTo(5)">5s</button>		
+      </div>   -->
+    </section>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="assets/bundle.js"></script>
+</body>
+</html>
