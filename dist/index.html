@@ -21,15 +21,15 @@
       
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
     <model-viewer src="assets/models/Astronaut.glb?sound=assets/audio/sample.mp3"
-                  ios-src="assets/models/Astronaut.usdz"
+                  ios-src="assets/models/scene-spin.reality"
                   alt="A 3D model of an astronaut"
+                  ar-modes="scene-viewer quick-look"
                   shadow-intensity="1"
                   camera-controls
                   interaction-prompt="auto"
                   auto-rotate
                   autoplay 
                   ar
-                  magic-leap
                   id="model-viewer">
     </model-viewer>
     <section class="attribution">
@@ -47,6 +47,7 @@
         <button onclick="jumpTo(5)">5s</button>		
       </div>   -->
     </section>
+    <a id="ar-link" rel="ar" href="assets/models/scene.reality">  open</a>
 
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>

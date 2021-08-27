@@ -66,9 +66,10 @@ body {
  #request-press-play button {
    padding:20px;
    margin:5px;
-   border-radius:0px;
+   /* border-radius:0px; */
    font-size: 20px;
    width:100%;
+   background: white;
  }
  
  .hide {
